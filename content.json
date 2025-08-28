@@ -1,16 +1,21 @@
 {
-  "title": "SparkPacket — Locations and Communications",
-  "subtitle": "Retro terminal personal site",
-  "intro": "",
+  "title": "sparkpacket — Locations and Communications",
+  "subtitle": "sparkpacket profile",
+  "intro": "yeah.",
   "sections": [
     {
       "heading": "Location",
-      "text": "",
-      "images": ["Cube_rotation.gif"]
+      "text": "Anchorage Alaska",
+      "heading": "Communications",
+      "text": "sparkpacket@outlook.com",
+      "text": "linker32corp@gmail.com",
+      "text": "frecklybelt@gmail.com",
+      "images": ["alaska.jpeg"]
     }
   ],
   "links": [
     { "label": "Home", "href": "./" },
     { "label": "YOU ARE HERE - Location and Communication", "href": "/-location/" }
+    { "label": "Main Website Hub", "href": "/" }
   ]
 }
