@@ -5,17 +5,17 @@
   "sections": [
     {
       "heading": "Location",
-      "text": "Anchorage Alaska",
-      "heading": "Communications",
-      "text": "sparkpacket@outlook.com",
-      "text": "linker32corp@gmail.com",
-      "text": "frecklybelt@gmail.com",
+      "text": "Anchorage, Alaska",
       "images": ["alaska.jpeg"]
+    },
+    {
+      "heading": "Communications",
+      "text": "sparkpacket@outlook.com\nlinker32corp@gmail.com\nfrecklybelt@gmail.com"
     }
   ],
   "links": [
     { "label": "Home", "href": "./" },
-    { "label": "YOU ARE HERE - Location and Communication", "href": "/profile-location/" },
+    { "label": "YOU ARE HERE - Location and Communication", "href": "../profile-location/" },
     { "label": "Main Website Hub", "href": "/" }
   ]
 }
