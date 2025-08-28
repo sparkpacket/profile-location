@@ -1,52 +1,3 @@
-<!--
-Retro Terminal Profile - Single-file website (index.html)
-
-INSTRUCTIONS
-1) Place this index.html inside each branch folder you want to host on GitHub Pages.
-   Example repo structure for your "profile" site:
-
-   profile/
-   ├─ index.html         <-- this file
-   ├─ content.json       <-- edit this to change text for this branch
-   └─ image/
-      ├─ portrait.png    <-- reference as "portrait.png" in content.json
-      └─ bg-1.png
-
-   To add another branch (actual website at sparkpacket.github.io/profile/example1):
-   - copy the profile/ folder to profile/example1/
-   - edit profile/example1/content.json and put images into profile/example1/image/
-   - commit and push to GitHub. GitHub Pages will serve sparkpacket.github.io/profile/example1/
-
-2) How the content.json works (example included below). Images must be in the local folder `image/` and referenced by filename only.
-   The page automatically loads ./content.json and renders entries.
-
-3) Example content.json (create this file next to index.html):
-{
-  "title": "SparkPacket — Profile",
-  "subtitle": "Retro terminal personal site",
-  "intro": "Welcome — this is a small terminal-style profile. Edit content.json to change this text.",
-  "sections": [
-    {
-      "heading": "About",
-      "text": "I tinker with stuff. I like retro terminals and hexadecimal.",
-      "images": ["portrait.png"]
-    },
-    {
-      "heading": "Projects",
-      "text": "Project 1 — a little web toy. Project 2 — something else.",
-      "images": []
-    }
-  ],
-  "links": [
-    { "label": "Home", "href": "./" },
-    { "label": "Example1", "href": "./example1/" }
-  ]
-}
-
-4) Keep index.html identical in each branch for easy edits. If you prefer a single central index, you can place index.html in root and modify the JS to load based on URL path (ask me and I'll adapt it).
-
--->
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -73,8 +24,13 @@ INSTRUCTIONS
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       padding:30px;display:flex;align-items:start;justify-content:center;
+
+      /* background image support */
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
     }
-    .shell{width:100%;max-width:var(--max-width);box-shadow:0 8px 40px rgba(0,0,0,0.7);border-radius:8px;overflow:hidden}
+    .shell{width:100%;max-width:var(--max-width);box-shadow:0 8px 40px rgba(0,0,0,0.7);border-radius:8px;overflow:hidden;background:rgba(0,0,0,0.6)}
     .header{background:#050505;padding:18px 20px;display:flex;align-items:center;gap:12px}
     .dots{display:inline-flex;gap:8px}
     .dot{width:12px;height:12px;border-radius:999px;background:#2b2b2b;box-shadow:0 0 8px var(--glow) inset}
@@ -165,6 +121,11 @@ INSTRUCTIONS
         subhead.textContent = json.subtitle || '';
         intro.textContent = json.intro || '';
 
+        // apply background if present
+        if (json.background) {
+          document.body.style.backgroundImage = `url('./image/${json.background}')`;
+        }
+
         // render sections
         sections.innerHTML = '';
         (json.sections || []).forEach(s => {
@@ -178,7 +139,6 @@ INSTRUCTIONS
             const wrap = document.createElement('div'); wrap.className = 'images';
             s.images.forEach(fn => {
               const img = document.createElement('img');
-              // images must be in ./image/<filename>
               img.src = './image/' + fn;
               img.alt = fn;
               img.loading = 'lazy';
