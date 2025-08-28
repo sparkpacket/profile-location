@@ -18,6 +18,7 @@
   "links": [
     { "label": "Home", "href": "/profile/" },
     { "label": "YOU ARE HERE - Location and Communication", "href": "/profile-location/" },
+    { "label": "cool stuff", "href": "/profile-stuff/" },
     { "label": "Main Website Hub", "href": "/" }
   ]
 }
