@@ -1,0 +1,16 @@
+{
+  "title": "SparkPacket — Locations and Communications",
+  "subtitle": "Retro terminal personal site",
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Location",
+      "text": "",
+      "images": ["Cube_rotation.gif"]
+    }
+  ],
+  "links": [
+    { "label": "Home", "href": "./" },
+    { "label": "YOU ARE HERE - Location and Communication", "href": "/-location/" }
+  ]
+}
